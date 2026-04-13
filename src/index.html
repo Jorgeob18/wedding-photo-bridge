@@ -82,6 +82,37 @@
             background: linear-gradient(to bottom, #c05178, #9f6777);
             opacity: 0.3;
         }
+        
+        /* Animaciones de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
     </style>
 </head>
 <body class="min-h-screen">
@@ -89,7 +120,7 @@
     <div class="scroll-scrubber"></div>
 
     <!-- Header Fijo / Glassmorphism -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-secondary/10">
+    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-secondary/10 animate-fade-in-up">
         <div class="max-w-lg mx-auto px-6 py-4 flex items-center justify-center">
             <div class="flex items-center gap-2">
                 <span class="font-script text-xl text-primary">Abdiel & Abigahil</span>
@@ -105,18 +136,18 @@
         <section class="mb-16">
             <!-- Badge -->
             <div class="flex justify-center mb-8">
-                <span class="inline-block px-4 py-2 rounded-full bg-secondary-container text-secondary text-xs font-body font-medium tracking-widest uppercase">
+                <span class="inline-block px-4 py-2 rounded-full bg-secondary-container text-secondary text-xs font-body font-medium tracking-widest uppercase animate-fade-in-up delay-100">
                     Recuerdos Inolvidables
                 </span>
             </div>
             
             <!-- Título Principal -->
-            <h1 class="font-heading text-4xl text-center mb-8 leading-tight" style="letter-spacing: -0.02em;">
+            <h1 class="font-heading text-4xl text-center mb-8 leading-tight animate-fade-in-up delay-200" style="letter-spacing: -0.02em;">
                 ¡Gracias por acompañarnos!
             </h1>
             
             <!-- Bloque de Texto con Marco Decorativo en L -->
-            <div class="relative pl-6 pr-4 py-6">
+            <div class="relative pl-6 pr-4 py-6 animate-fade-in-up delay-300">
                 <div class="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
                 <p class="font-body text-lg text-on-surface-variant leading-relaxed">
                     Estamos inmensamente alegres de que quieran compartir este momento tan especial con sus fotos y videos.
@@ -127,7 +158,7 @@
         <!-- CTA Principal -->
         <section class="mb-16">
             <a href="https://knipsmig.com/Z3749o5k" 
-               class="gradient-primary flex items-center justify-center gap-3 px-8 py-5 rounded-full text-white font-body font-semibold text-lg transition-all duration-300 shadow-lg">
+               class="gradient-primary flex items-center justify-center gap-3 px-8 py-5 rounded-full text-white font-body font-semibold text-lg transition-all duration-300 shadow-lg animate-fade-in-up delay-400">
                 <span class="material-symbols-outlined text-2xl">photo_camera</span>
                 Compartir Fotografía o Video
             </a>
@@ -137,19 +168,19 @@
         <section class="mb-16">
             <div class="grid grid-cols-2 gap-4">
                 <!-- Imagen 1 - Grande -->
-                <div class="row-span-2">
+                <div class="row-span-2 animate-fade-in-up delay-300">
                     <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=600&fit=crop" 
                          alt="Momento romántico de los novios" 
                          class="w-full h-full object-cover rounded-lg shadow-sm">
                 </div>
                 <!-- Imagen 2 -->
-                <div>
+                <div class="animate-fade-in-up delay-400">
                     <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=400&h=300&fit=crop" 
                          alt="Detalles de la recepción" 
                          class="w-full h-full object-cover rounded-lg shadow-sm">
                 </div>
                 <!-- Imagen 3 -->
-                <div>
+                <div class="animate-fade-in-up delay-500">
                     <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=400&h=300&fit=crop" 
                          alt="Mesa de recepción con detalles" 
                          class="w-full h-full object-cover rounded-lg shadow-sm">
@@ -158,7 +189,7 @@
         </section>
 
         <!-- Cierre y Firma -->
-        <section class="text-center mb-12">
+        <section class="text-center mb-12 animate-fade-in-up delay-500">
             <p class="font-heading text-xl text-on-surface mb-4">Con amor, Abdiel & Abigail</p>
             
             <!-- Iconos Decorativos -->
@@ -172,7 +203,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-secondary/10">
+    <footer class="border-t border-secondary/10 animate-fade-in-up delay-500">
         <div class="max-w-lg mx-auto px-5 py-8 text-center">
             <p class="font-heading text-lg text-primary mb-4">Abdiel & Abigahil</p>
             <p class="font-body text-sm text-on-surface-variant">14 de junio de 2026 • Tapalpa, Jalisco</p>
